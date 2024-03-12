@@ -154,3 +154,10 @@ NB: Make sure PostgreSQL is running.
 - Endpoint : `POST http://127.0.0.1:5000/pos/transaction/v1.0/sync/transaction/ecf34c00-6c61-4cea-b3d4-d628171b4ea5`
 - Require Authentication Token: `YES`
 - Request body :
+
+# Important note on RSA Token
+
+Due to the fact this is a POC and assessment I have left both the PRIVATE AND PUBLIC KEY in this repo. 
+This is not how things should be done in production. 
+
+The key will be kept else where. Github secret for example. 
