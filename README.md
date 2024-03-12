@@ -161,3 +161,7 @@ Due to the fact this is a POC and assessment I have left both the PRIVATE AND PU
 This is not how things should be done in production. 
 
 The key will be kept else where. Github secret for example. 
+
+# Future features
+
+A list of what should be done in the future can be found by searching `@todo:` in your IDE

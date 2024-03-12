@@ -5,6 +5,9 @@ import http from 'http';
 import swaggerRouter from './docs/swagger';
 import express from 'express';
 
+// This is a different set up of the application that offers us swagger as a documentation for API. 
+// When set up fully we can see the endpoints, requests, response from this page. 
+// @todo: set up swagger fully. 
 async function startServer() {
   const app = express();
 
