@@ -157,10 +157,14 @@ NB: Make sure PostgreSQL is running.
 
 # Important note on RSA Token
 
-Both the PRIVATE AND PUBLIC KEY in this repo. 
+Both the PRIVATE AND PUBLIC KEY are kept in this repo since we are dealing with a POC. To allow all users to run the application write away.  
 This is not how things should be done in production. 
 
 The key will be kept else where. Github secret for example. 
+
+## How I would normally do it: 
+both files under constans: `private.pem` and `public.pem` would not be present as it will be listed under `.gitignore`
+every user would have to create their own RSA private and public key pair.
 
 # Future features
 
