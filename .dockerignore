@@ -15,5 +15,3 @@ Dockerfile
 jest.config.ts
 README.md
 test-report.html
-
-
