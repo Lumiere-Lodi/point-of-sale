@@ -42,6 +42,8 @@ NB: Make sure PostgreSQL is running.
 
 ## ENDPOINTS
 
+Export postman collection to your postman from the root: `point-of-sale.postman_collection.json`
+
 ### Registering a new user
 - Endpoint : `POST http://localhost:5000/pos/user/v1.0/sync/register`
 - Require Authentication Token: `NO`
