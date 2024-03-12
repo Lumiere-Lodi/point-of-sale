@@ -17,7 +17,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"lumiere\",\r\n    \"email\": \"lumieremondo669@gmail.com\", \r\n    \"password\": \"test1\"\r\n\r\n}",
+							"raw": "{\r\n    \"name\": \"lumiere\",\r\n    \"email\": \"lumieremondo01@gmail.com\", \r\n    \"password\": \"test1\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -86,7 +86,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"product\": \"e4a9e203-8f68-461c-9194-831df2babda9\", \r\n    \"upsell\": \"57d7494f-431b-4f18-8c8f-edcf64a18015\"\r\n}",
+							"raw": "{\r\n    \"product\": \"e42e2450-b6e2-4ab7-b471-469a849d6178\", \r\n    \"upsell\": \"57d7494f-431b-4f18-8c8f-edcf64a18015\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -318,39 +318,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"product\": [\r\n        {\r\n            \"product_id\": \"e4a9e203-8f68-461c-9194-831df2babda9\",\r\n            \"quantity\": 3,\r\n            \"upsell_product\": [\r\n                \"c5e13869-0421-46bd-a3bb-bc0164c3d728\",\r\n                \"27fc50e0-5d16-4be2-a50f-511a2b7c4280\"\r\n            ]\r\n        },\r\n        {\r\n            \"product_id\": \"57d7494f-431b-4f18-8c8f-edcf64a18015\",\r\n            \"quantity\": 3,\r\n            \"upsell_product\": [\r\n                \"90090259-f0b7-4df9-8f01-17298d7443ee\",\r\n                \"27fc50e0-5d16-4be2-a50f-511a2b7c4280\"\r\n            ]\r\n        }\r\n    ],\r\n    \"totalAmount\": 100\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:5000/pos/transaction/v1.0/sync/createTransaction",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"pos",
-								"transaction",
-								"v1.0",
-								"sync",
-								"createTransaction"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "POST transaction",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"product\": [\r\n        {\r\n            \"product_id\": \"e4a9e203-8f68-461c-9194-831df2babda9\",\r\n            \"quantity\": 3,\r\n            \"upsell_product\": [\r\n                \"c5e13869-0421-46bd-a3bb-bc0164c3d728\",\r\n                \"27fc50e0-5d16-4be2-a50f-511a2b7c4280\"\r\n            ]\r\n        },\r\n        {\r\n            \"product_id\": \"57d7494f-431b-4f18-8c8f-edcf64a18015\",\r\n            \"quantity\": 3,\r\n            \"upsell_product\": [\r\n                \"90090259-f0b7-4df9-8f01-17298d7443ee\",\r\n                \"27fc50e0-5d16-4be2-a50f-511a2b7c4280\"\r\n            ]\r\n        }\r\n    ],\r\n    \"totalAmount\": 100\r\n}",
+							"raw": "{\r\n    \"product\": [\r\n        {\r\n            \"product_id\": \"e4a9e203-8f68-461c-9194-831df2babda9\",\r\n            \"quantity\": 3,\r\n            \"upsell_product\": [\r\n                \"c5e13869-0421-46bd-a3bb-bc0164c3d728\",\r\n                \"27fc50e0-5d16-4be2-a50f-511a2b7c4280\"\r\n            ]\r\n        },\r\n        {\r\n            \"product_id\": \"57d7494f-431b-4f18-8c8f-edcf64a18015\",\r\n            \"quantity\": 3,\r\n            \"upsell_product\": [\r\n                \"90090259-f0b7-4df9-8f01-17298d7443ee\",\r\n                \"27fc50e0-5d16-4be2-a50f-511a2b7c4280\"\r\n            ]\r\n        }\r\n    ],\r\n    \"totalAmount\": 8500\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -381,10 +349,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/pos/transaction/v1.0/sync/transaction/ecf34c00-6c61-4cea-b3d4-d628171b4ea5",
+							"raw": "http://127.0.0.1:5000/pos/transaction/v1.0/sync/transaction/ecf34c00-6c61-4cea-b3d4-d628171b4ea5",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
 							"port": "5000",
 							"path": [
