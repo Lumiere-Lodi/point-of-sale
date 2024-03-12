@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "69f1fb2a-7473-41be-94c5-b8ad5bf87f73",
+		"name": "point-of-sale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23386951",
+		"_collection_link": "https://www.postman.com/jembi-platform/workspace/point-of-sale/collection/23386951-69f1fb2a-7473-41be-94c5-b8ad5bf87f73?action=share&source=collection_link&creator=23386951"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"lumiere\",\r\n    \"email\": \"lumieremondo669@gmail.com\", \r\n    \"password\": \"test1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/pos/user/v1.0/sync/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"user",
+								"v1.0",
+								"sync",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"lumieremondo669@gmail.com\", \r\n    \"password\": \"test1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/pos/user/v1.0/sync/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"user",
+								"v1.0",
+								"sync",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UPSELL",
+			"item": [
+				{
+					"name": "POST upsell",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\": \"e4a9e203-8f68-461c-9194-831df2babda9\", \r\n    \"upsell\": \"57d7494f-431b-4f18-8c8f-edcf64a18015\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/pos/upsell/v1.0/sync/addUpsell",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"upsell",
+								"v1.0",
+								"sync",
+								"addUpsell"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific upsell product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/pos/upsell/v1.0/sync/retrieve/e4a9e203-8f68-461c-9194-831df2babda9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"upsell",
+								"v1.0",
+								"sync",
+								"retrieve",
+								"e4a9e203-8f68-461c-9194-831df2babda9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE product from upsell",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/pos/upsell/v1.0/sync/delete/e4a9e203-8f68-461c-9194-831df2babda9/57d7494f-431b-4f18-8c8f-edcf64a18015",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"upsell",
+								"v1.0",
+								"sync",
+								"delete",
+								"e4a9e203-8f68-461c-9194-831df2babda9",
+								"57d7494f-431b-4f18-8c8f-edcf64a18015"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODUCT",
+			"item": [
+				{
+					"name": "Delete Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOTJlNWQwY2ItMzNmNS00ZGNjLWEyOTItYWY3MDUyMjRkYzkxIiwiaWF0IjoxNzA5OTI5OTc5LCJleHAiOjE3MDk5MzA1Nzl9.X2qBZjqZI9wTnXKqMIB98csd05_8R5wpWQ8Y462tipBGLKofgvZPO_PZ6pkRkCYP-2VhD0ZuMspc6wq58cQ4RnS1DkSV4t6YsQQ3d-dMpkYlR26Li3GVqtXvNkj7pGZk6PyadHTd7FzGHPNXEhQrv8S7sFLbxlqDLRBE6stY8bc2VQUUdoyDRbEYoWuhQCliE58V-LjlfOPi6qXtqf1-j4iDCuxIY3hr_8AB40JuRnWKLl4iCWAv9kcM2R--LyB--lLibCPXkdSwB9NGsUBvCGaIj9sCA5n65gGGYWTuor0YeTfTsYGe2r3jCD_r2wrC45yS0-oznxPPnRNmsmgETA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"bob\", \r\n    \"price\": 12, \r\n    \"description\": \"orange fruit\",\r\n    \"quantity\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/pos/product/v1.0/sync/delete/83e7d131-8c10-4cf3-9b92-b6728ba715ac",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"product",
+								"v1.0",
+								"sync",
+								"delete",
+								"83e7d131-8c10-4cf3-9b92-b6728ba715ac"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOTJlNWQwY2ItMzNmNS00ZGNjLWEyOTItYWY3MDUyMjRkYzkxIiwiaWF0IjoxNzA5OTI5OTc5LCJleHAiOjE3MDk5MzA1Nzl9.X2qBZjqZI9wTnXKqMIB98csd05_8R5wpWQ8Y462tipBGLKofgvZPO_PZ6pkRkCYP-2VhD0ZuMspc6wq58cQ4RnS1DkSV4t6YsQQ3d-dMpkYlR26Li3GVqtXvNkj7pGZk6PyadHTd7FzGHPNXEhQrv8S7sFLbxlqDLRBE6stY8bc2VQUUdoyDRbEYoWuhQCliE58V-LjlfOPi6qXtqf1-j4iDCuxIY3hr_8AB40JuRnWKLl4iCWAv9kcM2R--LyB--lLibCPXkdSwB9NGsUBvCGaIj9sCA5n65gGGYWTuor0YeTfTsYGe2r3jCD_r2wrC45yS0-oznxPPnRNmsmgETA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/pos/product/v1.0/sync/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"product",
+								"v1.0",
+								"sync",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"bob\", \r\n    \"price\": 22, \r\n    \"description\": \"orange fruit\",\r\n    \"quantity\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/pos/product/v1.0/sync/addProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"product",
+								"v1.0",
+								"sync",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"bob\", \r\n    \"price\": 12, \r\n    \"description\": \"orange fruit\",\r\n    \"quantity\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/pos/product/v1.0/sync/update/83e7d131-8c10-4cf3-9b92-b6728ba715ac",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"product",
+								"v1.0",
+								"sync",
+								"update",
+								"83e7d131-8c10-4cf3-9b92-b6728ba715ac"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TRANSACTION",
+			"item": [
+				{
+					"name": "POST transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\": [\r\n        {\r\n            \"product_id\": \"e4a9e203-8f68-461c-9194-831df2babda9\",\r\n            \"quantity\": 3,\r\n            \"upsell_product\": [\r\n                \"c5e13869-0421-46bd-a3bb-bc0164c3d728\",\r\n                \"27fc50e0-5d16-4be2-a50f-511a2b7c4280\"\r\n            ]\r\n        },\r\n        {\r\n            \"product_id\": \"57d7494f-431b-4f18-8c8f-edcf64a18015\",\r\n            \"quantity\": 3,\r\n            \"upsell_product\": [\r\n                \"90090259-f0b7-4df9-8f01-17298d7443ee\",\r\n                \"27fc50e0-5d16-4be2-a50f-511a2b7c4280\"\r\n            ]\r\n        }\r\n    ],\r\n    \"totalAmount\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/pos/transaction/v1.0/sync/createTransaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"transaction",
+								"v1.0",
+								"sync",
+								"createTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\": [\r\n        {\r\n            \"product_id\": \"e4a9e203-8f68-461c-9194-831df2babda9\",\r\n            \"quantity\": 3,\r\n            \"upsell_product\": [\r\n                \"c5e13869-0421-46bd-a3bb-bc0164c3d728\",\r\n                \"27fc50e0-5d16-4be2-a50f-511a2b7c4280\"\r\n            ]\r\n        },\r\n        {\r\n            \"product_id\": \"57d7494f-431b-4f18-8c8f-edcf64a18015\",\r\n            \"quantity\": 3,\r\n            \"upsell_product\": [\r\n                \"90090259-f0b7-4df9-8f01-17298d7443ee\",\r\n                \"27fc50e0-5d16-4be2-a50f-511a2b7c4280\"\r\n            ]\r\n        }\r\n    ],\r\n    \"totalAmount\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/pos/transaction/v1.0/sync/createTransaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"transaction",
+								"v1.0",
+								"sync",
+								"createTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/pos/transaction/v1.0/sync/transaction/ecf34c00-6c61-4cea-b3d4-d628171b4ea5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pos",
+								"transaction",
+								"v1.0",
+								"sync",
+								"transaction",
+								"ecf34c00-6c61-4cea-b3d4-d628171b4ea5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

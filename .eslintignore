@@ -1,0 +1,7 @@
+build
+node_modules
+logs
+*.log
+coverage
+.eslintcache
+test-report.html
