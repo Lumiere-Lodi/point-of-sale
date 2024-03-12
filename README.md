@@ -157,7 +157,7 @@ NB: Make sure PostgreSQL is running.
 
 # Important note on RSA Token
 
-Due to the fact this is a POC and assessment I have left both the PRIVATE AND PUBLIC KEY in this repo. 
+Both the PRIVATE AND PUBLIC KEY in this repo. 
 This is not how things should be done in production. 
 
 The key will be kept else where. Github secret for example. 
